@@ -52,6 +52,5 @@ while True:
     if any(check000):
         print("ZEROS WIN!")
         break
-print("CONGRATULATIONS!")
-
-#123
+print("CONGRATULATIONS!\n")
+exit = input('Anykey to exit')
