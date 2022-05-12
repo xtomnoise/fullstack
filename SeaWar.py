@@ -27,12 +27,10 @@ class Ship:
         if self.horis:
             for i in range(self._size):
                 self._cells.append((self._cords[0], self._cords[1] + i))
-                #                 print((self._cords[0], self._cords[1]+i))
                 self._damage.append('0')
         else:
             for i in range(self._size):
                 self._cells.append((self._cords[0] + i, self._cords[1]))
-                #                 print((self._cords[0], self._cords[1]+i))
                 self._damage.append('0')
 
     def strike(self, value):
@@ -44,7 +42,6 @@ class Ship:
             for i in range(self._size):
                 self._damage[i] = '■'
             self._status = 'Dead'
-            #             print('Корабль потоплен')
             return self._status
         else:
             self._status = 'Alive'
