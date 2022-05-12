@@ -24,14 +24,14 @@ class Ship:
         _size = None  # 1, 2, 3
         self._cells = []
         self._damage = []
+        
         if self.horis:
             for i in range(self._size):
                 self._cells.append((self._cords[0], self._cords[1] + i))
-                self._damage.append('0')
         else:
             for i in range(self._size):
                 self._cells.append((self._cords[0] + i, self._cords[1]))
-                self._damage.append('0')
+            self._damage.append('0')
 
     def strike(self, value):
         self._damage[self._cells.index(value)] = 'X'
